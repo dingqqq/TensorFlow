@@ -21,10 +21,11 @@ init = tf.global_variables_initializer()
 sess = tf.Session()
 sess.run(init)  # reset values to wrong
 for i in range(1000):
-    sess.run(train, {x:x_train, y:y_train})
+    sess.run(train, {x: x_train, y: y_train})
+    print sess.run([W, b, loss], {x:x_train, y:y_train})
 
 # evaluate training accuracy
-curr_W, curr_b, curr_loss = sess.run([W, b, loss], {x:x_train, y:y_train})
+curr_W, curr_b, curr_loss = sess.run([W, b, loss], {x: x_train, y: y_train})
 print("W: %s b: %s loss: %s"%(curr_W, curr_b, curr_loss))
 
 

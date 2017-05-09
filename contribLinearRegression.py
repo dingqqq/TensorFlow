@@ -18,8 +18,7 @@ estimator = tf.contrib.learn.LinearRegressor(feature_columns=features)
 # of data (num_epochs) we want and how big each batch should be.
 x = np.array([1., 2., 3., 4.])
 y = np.array([0., -1., -2., -3.])
-input_fn = tf.contrib.learn.io.numpy_input_fn({"x": x}, y, batch_size=4,
-                                              num_epochs=1000)
+input_fn = tf.contrib.learn.io.numpy_input_fn({"x": x}, y, batch_size=4, num_epochs=1000)
 
 # We can invoke 1000 training steps by invoking the `fit` method and passing the
 # training data set.
