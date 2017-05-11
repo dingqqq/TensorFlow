@@ -1,2 +1,4 @@
 .idea
 MNIST_data
+iris_test.csv
+iris_training.csv
