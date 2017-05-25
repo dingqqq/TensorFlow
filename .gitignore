@@ -2,3 +2,6 @@
 MNIST_data
 iris_test.csv
 iris_training.csv
+adult.data
+adult.test
+questions-words.txt
