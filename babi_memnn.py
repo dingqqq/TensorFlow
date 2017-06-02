@@ -229,3 +229,12 @@ model.fit([inputs_train, queries_train], answers_train,
           batch_size=32,
           epochs=120,
           validation_data=([inputs_test, queries_test], answers_test))
+
+# visualize predicted answer and correct answer
+pred_test = model.predict([inputs_test, queries_test])
+for i in xrange(len(pred_test)):
+    print("Story: {}".format(' '.join(test_stories[i][0])))
+    print("Query: {}".format(' '.join(test_stories[i][1])))
+    print("Correct Answer: {}".format(test_stories[i][2]))
+    print("Predicted Answer: {}".format(vocab[pred_test[i].argmax() - 1]))
+    print("\n")
